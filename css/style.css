@@ -1,0 +1,123 @@
+.hidden {
+  display: none;
+}
+.show {
+    display: block;
+}
+.fa {
+    cursor: pointer;
+    color: #263238;
+}
+.fa-pie-chart {
+    width: 100px;
+}
+.box {
+    position: absolute;
+    width: 900px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family: ps;
+    color: #263238;
+}
+.content {
+    background: #ddeafb;
+    box-shadow: 0 0 2px #9baec4 inset;
+    color: #95a5a6;
+    font-family: hk;
+}
+[contenteditable=true]:empty:before {
+  content: attr(placeholder);
+  display: block;
+}
+.fa-plus-circle {
+    margin-right: 2px;
+}
+.table-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 30%;
+    height: 100%;
+    background-color: #ACDBC9;
+    float: left;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.chart-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+    background-color: #E4F1FE;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.center {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.fa-refresh {
+    position: absolute;
+    top: 50%;
+    right: 70%;
+    -webkit-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+}
+.clip-path {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    background: white;
+    z-index: 100;
+}
+.pie {
+    position: relative;
+    top: 50%;
+    left: 30%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.legend {
+    width: 250px;
+    margin: 0 0 0 350px;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    list-style: none;
+}
+.legend-item {
+    margin: 10px 0;
+}
+.before-legend-item {
+    content: '';
+    width: 10px;
+    height: 10px;
+    margin: 0 10px;
+    border-radius: 50%;
+    background: #009688;
+    display: inline-block;
+}
+
+
+
+@font-face {
+    font-family: hk;
+    src: url("fonts/hk/HKGrotesk-Regular.otf")
+}
+@font-face {
+    font-family: ps;
+    src: url("fonts/ps/peace_sans.otf")
+}
