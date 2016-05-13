@@ -1,4 +1,4 @@
-var colors = ["#009688", "#00acc1", "#795548", "#ff8a80", "#e53935", "#dce775", "#00e676", "#bcaaa4", "#9c27b0", "#b9f6ca", "#e6ee9c", "#607d8b", "#ff9800"];
+var colors = ["#009688", "#ff8a80", "#795548", "#e53935", "#dce775", "#00acc1", "#00e676", "#bcaaa4", "#9c27b0", "#b9f6ca", "#e6ee9c", "#607d8b", "#ff9800"];
 
 function showBox() {
     var box = document.getElementById("show");
@@ -28,16 +28,15 @@ function removeRow() {
 function refresh() {
     removeElementsByClass("path");
     
-    
     var cells = document.getElementsByClassName("content");
     var table = new Array();
     for (i = 0; i < cells.length; i++) { // We can simplify the code here (i += 2)
         table.push(cells[i].innerHTML);
     }
-    
     var total = 0;
     var condition = false;
     for (i = 1; i <= table.length; i += 2) {
+        table[i] = table[i].replace(/<\/?[^>]+(>|$)/g, "");
         document.getElementById("error-message").innerHTML = "<p>One of the values is invalid.</p>";
         condition = false;
         if (isNaN(table[i]) || Number(table[i]) < 0 || Number(table[i]) > 100)  {break;}
